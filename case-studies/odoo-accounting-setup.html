@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Odoo Accounting Setup · Case study 01 · Muhammad Shayan</title>
+<meta name="description" content="From three spreadsheets to one set of books for a growing distributor">
+<meta name="author" content="Muhammad Shayan">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Odoo Accounting Setup · Case study 01 · Muhammad Shayan">
+<meta property="og:description" content="From three spreadsheets to one set of books for a growing distributor">
+<meta name="theme-color" content="#0F3D7A">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230F3D7A'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='26' fill='white' text-anchor='middle'%3EMS%3C/text%3E%3Ccircle cx='49' cy='40' r='3.4' fill='%235AA7E8'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&family=Inter+Tight:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/site.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body class="page-case">
+<a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"><span></span></div><header class="topbar">
+  <a class="mono" href="../index.html" aria-label="Muhammad Shayan, home"><span>MS</span><i></i></a>
+  <nav class="pill" aria-label="Primary">
+    <a href="../index.html#top" data-nav="home" class="nav-home">Home</a>
+    <a href="../index.html#about" data-nav="about" class="nav-about">About</a>
+    <a href="../index.html#work" data-nav="work" class="nav-work" aria-current="page">Work</a>
+    <a href="../resume.html" data-nav="resume" class="nav-resume">Resume</a>
+    <a href="../index.html#contact" data-nav="contact" class="nav-contact">Contact</a>
+  </nav>
+  <a class="btn btn-li" href="https://www.linkedin.com/in/m-shayaan-8ba56044a/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg><span>LinkedIn</span><span class="sr">(opens in a new tab)</span></a>
+</header><main id="main">
+<section class="case-hero" id="overview" data-toc="overview">
+  <svg class="orbit orbit-case" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+  <ellipse cx="300" cy="300" rx="280" ry="120" transform="rotate(-28 300 300)" stroke="currentColor" stroke-width="1"/>
+  <ellipse cx="300" cy="300" rx="250" ry="150" transform="rotate(-58 300 300)" stroke="currentColor" stroke-width="1"/>
+  <circle class="orb-dot" cx="0" cy="0" r="4" fill="currentColor"><animateMotion dur="18s" repeatCount="indefinite" rotate="auto" path="M300,180 a280,120 -28 1,0 1,0"/></circle>
+</svg>
+  <div class="wrap">
+    <a class="back" href="../index.html#work"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>All case studies</a>
+    <p class="case-tags"><span>Case study 01</span><span>US wholesale distributor</span><span>Odoo 17 Enterprise</span></p>
+    <h1 class="case-t">Odoo Accounting Setup for an Early-Stage US Wholesale Distributor</h1>
+    <p class="case-sub">From three spreadsheets to one set of books for a growing distributor. Journals, opening balances, open receivables and payables, and payment-matching tests in Odoo 17 Enterprise.</p>
+    <div class="cta-row">
+      <a class="btn btn-white btn-lg" href="#report"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>Read the full report<span class="btn-meta">44 pages</span></a>
+      <a class="btn btn-ghost-light btn-lg" href="../assets/pdf/case-01-full-report.pdf" download><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Download PDF</a>
+    </div>
+  </div>
+</section>
+<div class="wrap facts" role="list">
+  <div role="listitem"><p class="fact-k">Client</p><p class="fact-v">US wholesale distributor</p></div>
+  <div role="listitem"><p class="fact-k">Industry</p><p class="fact-v">Wholesale distribution</p></div>
+  <div role="listitem"><p class="fact-k">Platform</p><p class="fact-v">Odoo 17 Enterprise</p></div>
+  <div role="listitem"><p class="fact-k">Consultant</p><p class="fact-v">Muhammad Shayan</p></div>
+</div>
+<div class="wrap case-layout">
+  <aside class="toc" aria-label="On this page">
+    <p class="toc-k">On this page</p>
+    <ol><li><a href="#overview" data-toc-link="overview">Overview</a></li><li><a href="#story" data-toc-link="story">Problem · Solution · Result</a></li><li><a href="#process" data-toc-link="process">How the work ran</a></li><li><a href="#results" data-toc-link="results">Results</a></li><li><a href="#summary" data-toc-link="summary">Executive summary</a></li><li><a href="#one-page" data-toc-link="one-page">One-page summary</a></li><li><a href="#report" data-toc-link="report">Full report</a></li></ol>
+    <div class="toc-dl">
+      <a href="../assets/pdf/case-01-full-report.pdf" download><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Full report (44 pp.)</a>
+      <a href="../assets/pdf/case-01-one-page.pdf" download><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>One-page summary</a>
+    </div>
+  </aside>
+  <div class="case-body">
+    <section id="story" data-toc="story" class="cblock">
+      <h2 class="h3">Problem, solution and result</h2>
+      <div class="psr">
+        <article class="psr-card psr-p reveal"><svg class="i psr-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4"/><path d="M12 16h.01"/></svg><p class="psr-k">Problem</p><p>The distributor used spreadsheets for customer invoices, supplier bills and bank payments. When customers paid several invoices in one transfer, the owner couldn't reliably tell which invoices were still open.</p></article>
+        <article class="psr-card psr-s reveal"><svg class="i psr-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg><p class="psr-k">Solution</p><p>Configured sales, purchase and bank journals in Odoo. Loaded opening balances and unpaid invoices and bills as of an agreed date. Tested a partial customer payment, a payment covering multiple invoices and a supplier credit.</p></article>
+        <article class="psr-card psr-r reveal"><svg class="i psr-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg><p class="psr-k">Result</p><p>The owner can see outstanding receivables and payables in Odoo, and the opening trial balance agrees to the source records.</p></article>
+      </div>
+      <div class="issues reveal">
+        <p class="issues-k">What was going wrong</p>
+        <ul><li>Invoices, bills and bank payments lived in three separate spreadsheets.</li><li>Customers paid several invoices in one transfer, or paid only part of one, with no link back to the invoices.</li><li>The owner could not say which invoices were open, what each customer owed, or which bills were due after credits.</li></ul>
+      </div>
+    </section>
+    <section id="process" data-toc="process" class="cblock">
+      <h2 class="h3">How the work ran</h2>
+      <ol class="steps steps-6">
+        <li class="reveal" style="--i:0"><span class="step-n">1</span><span class="step-a">Review</span><span class="step-b">needs & cut-over date</span></li>
+        <li class="reveal" style="--i:1"><span class="step-n">2</span><span class="step-a">Set up</span><span class="step-b">company & journals</span></li>
+        <li class="reveal" style="--i:2"><span class="step-n">3</span><span class="step-a">Configure</span><span class="step-b">terms & partners</span></li>
+        <li class="reveal" style="--i:3"><span class="step-n">4</span><span class="step-a">Load</span><span class="step-b">open invoices & bills</span></li>
+        <li class="reveal" style="--i:4"><span class="step-n">5</span><span class="step-a">Test</span><span class="step-b">partial & multi-invoice payments</span></li>
+        <li class="reveal" style="--i:5"><span class="step-n">6</span><span class="step-a">Hand over</span><span class="step-b">reports & routine</span></li>
+      </ol>
+    </section>
+    <section id="results" data-toc="results" class="cblock">
+      <h2 class="h3">Results</h2>
+      <div class="res-grid">
+        <div class="res reveal"><svg class="i res-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><p>Opening trial balance agreed to source records with zero difference</p></div>
+        <div class="res reveal"><svg class="i res-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><p>Every payment matched to the invoices it settles, including partial and multi-invoice payments</p></div>
+        <div class="res reveal"><svg class="i res-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><p>Supplier credits offset against open bills, so the net amount due is clear</p></div>
+        <div class="res reveal"><svg class="i res-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><p>Aged receivables and payables by customer and supplier, always current</p></div>
+      </div>
+      <div class="hl-box reveal">
+        <p class="hl-k">Highlights from the engagement</p>
+        <ul class="checks"><li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Sales, purchase, bank and miscellaneous journals configured in Odoo 17 Enterprise.</span></li><li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Every unpaid invoice and bill loaded as its own open document at the agreed cut-over date.</span></li><li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>An opening-balance clearing account used to prove nothing was counted twice.</span></li><li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tests: partial customer payment, one payment for several invoices, supplier credit.</span></li><li><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Opening trial balance agreed to the source records; ageing reports handed over to the owner.</span></li></ul>
+      </div>
+    </section>
+    <section id="summary" data-toc="summary" class="cblock prose">
+      <h2 class="h3">Executive summary</h2>
+      <p>The client is an early-stage wholesale distributor in the United States that buys finished goods from suppliers and sells them on credit terms to business customers. Until this project it ran its finances on spreadsheets: one for customer invoices, one for supplier bills and a third for bank payments in and out.</p>
+      <p>The breaking point was customer remittances. Customers regularly paid several invoices with a single bank transfer, and sometimes paid only part of an invoice. With no link between a payment and the invoices it settled, the owner could not reliably say which invoices were still open, how much each customer really owed, or which supplier bills were still due after credits.</p>
+      <p>The work moved the accounting into Odoo 17 Enterprise in four parts: configuration of the company, chart of accounts, payment terms, partners and core journals; opening balances loaded at an agreed cut-over date, with every unpaid invoice and bill loaded as its own open document; tests of the three scenarios that caused the most trouble; and verification and handover of the receivable and payable reports.</p>
+      <p class="src">Adapted from section 1 of the full report.</p>
+    </section>
+    <section id="one-page" data-toc="one-page" class="cblock">
+      <h2 class="h3">One-page summary</h2>
+      <div class="onepage">
+        <button type="button" class="onepage-btn" data-lightbox="../assets/img/summary-01.png" aria-label="Enlarge the one-page summary for case study 01">
+          <img src="../assets/img/summary-01.png" width="909" height="1287" loading="lazy" alt="One-page summary of case study 01, Odoo Accounting Setup: the problem, the solution steps and four results.">
+          <span class="onepage-zoom"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/></svg>Enlarge</span>
+        </button>
+        <div class="onepage-side">
+          <p>The one-page version is made for sharing: problem, solution and results on a single A4 sheet.</p>
+          <a class="btn btn-outline" href="../assets/pdf/case-01-one-page.pdf" download><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Download one-page PDF</a>
+          <p class="inside-k">Inside the full report</p>
+          <ol class="inside"><li>Executive Summary</li><li>Client Background and Starting Situation</li><li>Objectives, Scope and Success Criteria</li><li>Approach and Methodology</li><li>System Configuration in Odoo 17 Enterprise</li><li>Opening Balances and Data Migration</li><li>Testing the Payment Scenarios</li><li>Results and Verification</li><li>Operating Routine Handed Over</li><li>Controls, Risks and Lessons</li><li>Recommendations and Next Steps</li><li>Appendix A: Opening Balance Migration Checklist</li><li>Appendix B: Configuration Reference</li><li>Appendix C: Glossary</li></ol>
+          <p class="inside-meta">44 pages · 24 annotated screenshot positions</p>
+        </div>
+      </div>
+    </section>
+    <section id="report" data-toc="report" class="cblock">
+      <div class="report-head">
+        <h2 class="h3">Full report</h2>
+        <div class="report-actions">
+          <a class="btn btn-outline btn-sm" href="../assets/pdf/case-01-full-report.pdf" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="m21 3-7 7"/><path d="m3 21 7-7"/></svg>Open in new tab</a>
+          <a class="btn btn-primary btn-sm" href="../assets/pdf/case-01-full-report.pdf" download><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg>Download</a>
+        </div>
+      </div>
+      <div class="viewer-mobile">
+        <svg class="i viewer-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+        <p><b>Odoo Accounting Setup: full report</b><br>44 pages · PDF</p>
+        <a class="btn btn-primary" href="../assets/pdf/case-01-full-report.pdf" target="_blank" rel="noopener">Open the report<span class="sr">(opens in a new tab)</span></a>
+      </div>
+      <div class="viewer">
+        <object data="../assets/pdf/case-01-full-report.pdf#view=FitH" type="application/pdf" aria-label="Full report for case study 01, 44 pages">
+          <div class="viewer-fallback">
+            <svg class="i viewer-i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+            <p><b>Odoo Accounting Setup: full report</b><br>44 pages · PDF</p>
+            <a class="btn btn-primary" href="../assets/pdf/case-01-full-report.pdf" target="_blank" rel="noopener">Open the report</a>
+          </div>
+        </object>
+      </div>
+    </section>
+  </div>
+</div>
+<nav class="wrap pager" aria-label="More case studies">
+  <a class="pager-a" href="quickbooks-desktop-to-odoo-logistics.html"><span class="pager-k"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>Previous · 06</span><span class="pager-t">QuickBooks Desktop → Odoo</span></a>
+  <a class="pager-a pager-next" href="inventory-valuation-category-margins.html"><span class="pager-k">Next · 02<svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span><span class="pager-t">Category Margins &amp; Inventory Valuation</span></a>
+</nav>
+</main>
+<dialog class="lightbox" aria-label="One-page summary">
+  <button type="button" class="lightbox-x" aria-label="Close"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg></button>
+  <img alt="One-page summary, enlarged" src="" width="909" height="1287">
+</dialog>
+<footer class="footer" id="contact">
+  <div class="footer-band">
+    <svg class="orbit orbit-footer" viewBox="0 0 600 600" fill="none" aria-hidden="true">
+  <ellipse cx="300" cy="300" rx="280" ry="120" transform="rotate(-28 300 300)" stroke="currentColor" stroke-width="1"/>
+  <ellipse cx="300" cy="300" rx="250" ry="150" transform="rotate(-58 300 300)" stroke="currentColor" stroke-width="1"/>
+  <circle class="orb-dot" cx="0" cy="0" r="4" fill="currentColor"><animateMotion dur="18s" repeatCount="indefinite" rotate="auto" path="M300,180 a280,120 -28 1,0 1,0"/></circle>
+</svg>
+    <div class="wrap">
+      <p class="eyebrow eyebrow-light">Contact</p>
+      <h2 class="closing reveal">Let's build books you can <span class="hl">rely on</span> together<span class="dot">.</span></h2>
+      <p class="footer-lead reveal">For audit, tax, accounting or an Odoo or QuickBooks project, the quickest way to reach me is a message on LinkedIn.</p>
+      <div class="cta-row reveal">
+        <a class="btn btn-white btn-lg" href="https://www.linkedin.com/in/m-shayaan-8ba56044a/" target="_blank" rel="noopener"><svg class="i" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>Message me on LinkedIn<span class="sr">(opens in a new tab)</span></a>
+        <a class="btn btn-ghost-light btn-lg" href="../resume.html"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>View resume</a>
+      </div>
+      <p class="footer-loc"><svg class="i" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/></svg>Dubai, United Arab Emirates</p>
+    </div>
+  </div>
+  <div class="wrap footer-cols">
+    <div>
+      <p class="f-name">Muhammad Shayan<span class="dot">.</span></p>
+      <p class="f-sub">Chartered Accountant (ACA, ICAP)<br>Founder, MMAC &amp; Co. Chartered Accountants</p>
+    </div>
+    <div>
+      <p class="f-h">Pages</p>
+      <ul><li><a href="../index.html#top">Home</a></li><li><a href="../index.html#about">About</a></li><li><a href="../index.html#work">Work</a></li><li><a href="../resume.html">Resume</a></li></ul>
+    </div>
+    <div>
+      <p class="f-h">Case studies</p>
+      <ul><li><a href="../case-studies/odoo-accounting-setup.html">Odoo Accounting Setup</a></li><li><a href="../case-studies/inventory-valuation-category-margins.html">Category Margins &amp; Inventory Valuation</a></li><li><a href="../case-studies/monthly-close.html">Monthly Close in Odoo</a></li><li><a href="../case-studies/shopify-stripe-payout-reconciliation.html">Shopify &amp; Stripe Payouts</a></li><li><a href="../case-studies/quickbooks-online-to-odoo-migration.html">QuickBooks Online → Odoo</a></li><li><a href="../case-studies/quickbooks-desktop-to-odoo-logistics.html">QuickBooks Desktop → Odoo</a></li></ul>
+    </div>
+    <div>
+      <p class="f-h">Connect</p>
+      <ul><li><a href="https://www.linkedin.com/in/m-shayaan-8ba56044a/" target="_blank" rel="noopener">LinkedIn<span class="sr">(opens in a new tab)</span></a></li><li><a href="https://mmac-co.com" target="_blank" rel="noopener">mmac-co.com<span class="sr">(opens in a new tab)</span></a></li><li>Dubai, UAE</li></ul>
+    </div>
+  </div>
+  <div class="wrap footer-base"><span>© 2026 Muhammad Shayan. All rights reserved.</span><span>Case studies anonymised; client companies are not named.</span></div>
+</footer><script src="../assets/js/site.js" defer></script>
+</body>
+</html>
